@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "techTalks",
+  title: "TechTalk",
   description: "A Reddit clone for developers, built with Next.js",
 };
 
@@ -23,7 +24,10 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-screen pt-12 bg-slate-50 antialiased">
-        {children}
+        <Navbar />
+        <div className="container max-w-7xl mx-auto h-full pt-12">
+          {children}
+        </div>
       </body>
     </html>
   );
